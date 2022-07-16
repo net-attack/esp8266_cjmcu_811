@@ -7,30 +7,27 @@
 #include <InfluxDbClient.h>
 #include <ESP8266WiFiMulti.h>
  
-#define LOOPDELAY 200
+#define LOOPDELAY 10000
 #define LED_PIN    2    
 
 Adafruit_CCS811 ccs;
 
 InfluxDBClient client;
 
-#define INFLUXDB_URL "http://server.local:8086"
-#define INFLUXDB_DATABASE "home"
-#define INFLUXDB_USER "grafana"
-#define INFLUXDB_PASSWORD "Bas3jump3r"
+#define INFLUXDB_URL "dumb"
+#define INFLUXDB_DATABASE "dumb"
+#define INFLUXDB_USER "dumb"
+#define INFLUXDB_PASSWORD "dumb"
 
 // WiFi AP SSID
-#define WIFI_SSID "Mufflon Bau"
+#define WIFI_SSID "dumb dumb"
 // WiFi password
-#define WIFI_PASSWORD "H@11o_W31t!"
+#define WIFI_PASSWORD "dumb"
 
 #define DEVICE "Sensor_3"
 ESP8266WiFiMulti wifiMulti;
 
 // Data point
-
-
-
 Point sensor("wifi_status");
 Point ccs_sensor("CCS811");
 
@@ -117,7 +114,7 @@ void loop() {
     }
     ccs_sensor.clearFields();
     ccs_sensor.addField("CO2", ccs.geteCO2());
-    ccs_sensor.addField("TVOCssure", ccs.getTVOC());
+    ccs_sensor.addField("TVOC", ccs.getTVOC());
     ccs_sensor.addField("temp", temp);
   }
 
