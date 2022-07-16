@@ -14,9 +14,15 @@ Adafruit_CCS811 ccs;
 
 InfluxDBClient client;
 
+#define INFLUXDB_URL "http://server.local:8086"
+#define INFLUXDB_DATABASE "home"
+#define INFLUXDB_USER "grafana"
+#define INFLUXDB_PASSWORD "Bas3jump3r"
 
 // WiFi AP SSID
+#define WIFI_SSID "Mufflon Bau"
 // WiFi password
+#define WIFI_PASSWORD "H@11o_W31t!"
 
 #define DEVICE "Sensor_3"
 ESP8266WiFiMulti wifiMulti;
